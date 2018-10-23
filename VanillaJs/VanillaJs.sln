@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.48
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaJs", "VanillaJs\VanillaJs.csproj", "{2F9C961F-0494-4D3B-864B-C0F2E3DE3133}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621} = {8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaJs.BridgeConversion", "VanillaJs.Bridge\VanillaJs.BridgeConversion.csproj", "{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F9C961F-0494-4D3B-864B-C0F2E3DE3133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9C961F-0494-4D3B-864B-C0F2E3DE3133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9C961F-0494-4D3B-864B-C0F2E3DE3133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9C961F-0494-4D3B-864B-C0F2E3DE3133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9E8ABB-9F6C-485A-BEC3-DB69E5D25621}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
