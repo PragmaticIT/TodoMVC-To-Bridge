@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<!--<html lang="en" ng-app="todomvc" data-framework="typescript">-->
+<html lang="en" ng-app="todomvc" >
+<head>
+    <meta charset="utf-8">
+    <title>Typescript & AngularJS • TodoMVC</title>
+    <link rel="stylesheet" href="node_modules/todomvc-common/base.css">
+    <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="todoapp" ng-controller="todoCtrl">
+        <div><input type="text" name="width" ng-model="Width" />
+        <p ng-bind="Width">test</p></div>
+        <div><input type="text" name="height" ng-model="Height" />
+        <p ng-bind="Height"></p>
+        </div>
+    </section>
+    <script src="node_modules/require/require.js"></script>
+    <script type="text/javascript">
+        require.config({
+            baseUrl: "node_modules",
+            paths: { angular: "angular/angular" },
+            shim: { angular: { exports: "angular" }}
+        });
+    </script>
+    <!--<script src="node_modules/todomvc-common/base.js"></script>-->
+    <!--<script src="node_modules/angular/angular.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>-->
+    <!--<script src="js/directives/TodoBlur.js"></script>
+    <script src="js/directives/TodoEscape.js"></script>
+    <script src="js/directives/TodoFocus.js"></script>
+    <script src="js/models/TodoItem.js"></script>
+    <script src="js/services/TodoStorage.js"></script>
+    <script src="js/controllers/TodoCtrl.js"></script>
+    <script src="js/Application.js"></script>-->
+    <script src="bridge/bridge.js"></script>
+    <script src="bridge/bridge.console.js"></script>
+    <script src="bridge/bridge.meta.js"></script>
+    <script src="bridge/TS_AngularJS.BridgeConversion.js"></script>
+    <script src="bridge/TS_AngularJS.BridgeConversion.meta.js"></script>
+</body>
+</html>
