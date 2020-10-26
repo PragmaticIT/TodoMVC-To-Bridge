@@ -7,13 +7,13 @@ namespace PragmaticIt.BridgeNet.MithrilBridge
     /// Marker interface for component state. Component need to implement 
     /// the state properties. This is shared to Vnode. Please inherit for component implementation 
     /// </summary>
-    [External]
+    //[External]
     [IgnoreCast]
     [IgnoreGeneric]
     [Convention(Notation = Notation.CamelCase)]
     public interface IMithrilComponent { }
 
-    [External]
+    // [External]
     [IgnoreCast]
     [IgnoreGeneric]
     [Convention(Notation = Notation.CamelCase)]
@@ -24,33 +24,57 @@ namespace PragmaticIt.BridgeNet.MithrilBridge
     /// <summary>
     /// <see cref="https://mithril.js.org/archive/v1.1.7/lifecycle-methods.html#oninit"/>
     /// </summary>
-    [External]
+   // [External]
     [IgnoreCast]
     public interface IHasOnInit
     {
         [Name("oninit")]
-        Func<Vnode, object> OnIntit { get; }
+        Func<Vnode, object> OnInit { get; }
     }
-    [External]
+    // [External]
+    [IgnoreGeneric]
     [IgnoreCast]
     public interface IHasOnInit<TAttr>
     {
         [Name("oninit")]
-        Func<Vnode<TAttr>, object> OnIntit { get; }
+        Func<Vnode<TAttr>, object> OnInit { get; }
     }
     [External]
+    [IgnoreGeneric]
     [IgnoreCast]
     public interface IHasOnInit<TState, TAttr> where TState : IComponentState<TState>
     {
         [Name("oninit")]
-        Func<Vnode<TState, TAttr>, object> OnIntit { get; }
+        Func<Vnode<TState, TAttr>, object> OnInit { get; }
     }
     [External]
     [IgnoreCast]
     public interface IHasOnCreate { }
-    [External]
+    //[External]
     [IgnoreCast]
-    public interface IHasOnBeforeUpdate { }
+    public interface IHasOnBeforeUpdate
+    {
+        [Name("onbeforeupdate")]
+        Func<Vnode, object> OnBeforeUpdate { get; }
+    }
+
+    //[External]
+    [IgnoreCast]
+    [IgnoreGeneric]
+    public interface IHasOnBeforeUpdate<TAttr>
+    {
+        [Name("onbeforeupdate")]
+        Func<Vnode<TAttr>, object> OnBeforeUpdate { get; }
+    }
+
+    //[External]
+    [IgnoreCast]
+    [IgnoreGeneric]
+    public interface IHasOnBeforeUpdate<TState, TAttr> where TState : IComponentState<TState>
+    {
+        [Name("onbeforeupdate")]
+        Func<Vnode<TState, TAttr>, object> OnBeforeUpdate { get; }
+    }
     [External]
     [IgnoreCast]
     public interface IHasOnUpdate { }
@@ -61,27 +85,38 @@ namespace PragmaticIt.BridgeNet.MithrilBridge
     [IgnoreCast]
     public interface IHasOnRemove { }
     #endregion
-    [External]
+    //  [External]
     [IgnoreCast]
+    [Convention(Notation = Notation.CamelCase)]
     public abstract class MithrilComponentBase
     {
         Func<Vnode, object> View { get { return ViewHandler; } }
         public abstract object ViewHandler(Vnode vnode);
     }
-    [External]
-    [IgnoreCast]
+    // [External]
+    [IgnoreGeneric]
+    // [IgnoreCast]
+    [Convention(Notation = Notation.CamelCase)]
     public abstract class MithrilComponentBase<TAttr>
     {
         public Func<Vnode<TAttr>, object> View { get { return ViewHandler; } }
         public abstract object ViewHandler(Vnode<TAttr> vnode);
     }
-    [External]
-    [IgnoreCast]
-    public abstract class MithrilComponentBase<TState, TAttr> : IComponentState<TState>
+    // [External]
+    [IgnoreGeneric]
+    //[IgnoreCast]
+    [Convention(Notation = Notation.CamelCase)]
+    public abstract class MithrilComponentBase<TState, TAttr> : IMithrilComponentBase<TState, TAttr>, IComponentState<TState>
         where TState : IComponentState<TState>
     {
         public Func<Vnode<TState, TAttr>, object> View { get { return ViewHandler; } }
 
         internal abstract object ViewHandler(Vnode<TState, TAttr> arg);
+    }
+
+    public interface IMithrilComponentBase<TState, TAttr> : IComponentState<TState>
+        where TState : IComponentState<TState>
+    {
+        Func<Vnode<TState, TAttr>, object> View { get; }
     }
 }

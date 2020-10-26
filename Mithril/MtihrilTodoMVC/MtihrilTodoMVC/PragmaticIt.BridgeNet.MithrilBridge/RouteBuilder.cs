@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace PragmaticIt.BridgeNet.MithrilBridge
 {
     [Convention(Notation = Notation.CamelCase)]
-    [ObjectLiteral]
+   // [ObjectLiteral]
     public class RouteBuilder
     {
         private readonly Dictionary<string, object> _routes = new Dictionary<string, object>();
