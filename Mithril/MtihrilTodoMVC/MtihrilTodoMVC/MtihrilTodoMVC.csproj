@@ -42,6 +42,7 @@
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\RouteBuilder.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\Vnode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\HandlerBuilder.cs" />
     <Compile Include="TodoMvc\State.cs" />
     <Compile Include="TodoMvc\Todo.cs" />
     <Compile Include="TodoMvc\TodoAttrs.cs" />
