@@ -39,7 +39,10 @@
     <Compile Include="App.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\Component.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\M.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\MRoute.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\RouteAttributes.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\RouteBuilder.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\RouteOptions.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\Vnode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\HandlerBuilder.cs" />

@@ -111,46 +111,6 @@ namespace PragmaticIt.BridgeNet.MithrilBridge
         public static Vnode m(string selector, object attrs, params object[] nodes) { return default(Vnode); }
 
     }
-    [External]
-    [Convention(Notation = Notation.CamelCase)]
-    public class MRoute
-    {
-
-        [Template("Link")]
-        public string Link() { return default(string); }
-
-        public void Set(string path, object parameters, RouteOptions options) { return; }
-
-        public string Get() { return default(string); }
-        public string Prefix { get; set; }
-        public object Param(string key) { return default(string); }
-    }
-    [External]
-    [ObjectLiteral]
-    [Convention(Notation = Notation.CamelCase)]
-    public class RouteOptions
-    {
-        [Field]
-        public bool Replace { get; set; }
-        [Field]
-        public object State { get; set; }
-        [Field]
-        public string Title { get; set; }
-    }
-    [External]
-    [ObjectLiteral]
-    [Convention(Notation = Notation.CamelCase)]
-    public class RouteAttributes
-    {
-        [Field]
-        public string Href { get; set; }
-        [Field]
-        public object Selector { get; set; }
-        [Field]
-        public object Options { get; set; }
-        [Field]
-        public bool Disabled { get; set; }
-    }
     //public class VnodeStateBase<TAttrs>
     //{
     //    public TAttrs Attrs { get; }
