@@ -38,6 +38,14 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\Component.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IComponentState.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnBeforeRemove.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnBeforeUpdate.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnCreate.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnInit.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnRemove.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IHasOnUpdate.cs" />
+    <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\IMithrilComponent.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\M.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\MRoute.cs" />
     <Compile Include="PragmaticIt.BridgeNet.MithrilBridge\RouteAttributes.cs" />

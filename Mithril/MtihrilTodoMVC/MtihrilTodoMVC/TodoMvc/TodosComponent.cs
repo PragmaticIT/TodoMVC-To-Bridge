@@ -11,7 +11,7 @@ namespace PragmaticIt.MtihrilTodoMVC.TodoMvc
     [IgnoreCast]
     //[Namespace(false)]
     //[ObjectLiteral]
-    public class TodosComponent :
+    public class TodosComponent :MithrilComponentBase<State,TodoAttrs>,
         IMithrilComponentBase<State, TodoAttrs>,
         IHasOnInit<State, TodoAttrs>,
         IHasOnBeforeUpdate<State, TodoAttrs>
@@ -27,11 +27,6 @@ namespace PragmaticIt.MtihrilTodoMVC.TodoMvc
                     return null;
                 };
             }
-        }
-        private object OnInitHandler(Vnode<State, TodoAttrs> vnode)
-        {
-            App.State.Computed(vnode);
-            return false;
         }
 
         public Func<Vnode<State, TodoAttrs>, object> OnBeforeUpdate { get { return OnBeforeUpdateHandler; } }
@@ -88,7 +83,7 @@ namespace PragmaticIt.MtihrilTodoMVC.TodoMvc
             }
         }
 
-        public object ViewHandler(Vnode<State, TodoAttrs> vnode)
+        public override object ViewHandler(Vnode<State, TodoAttrs> vnode)
         {
             var ui = App.State;
             var handler = new HandlerBuilder().Add<KeyboardEvent<HTMLInputElement>>("onkeypress", Add).Build(); //new ObjectLiteral(new { ala = "makota" });
