@@ -3,6 +3,8 @@
 ### Conversion notes
 
 
+[![Built with Bridge.NET](https://img.shields.io/badge/built%20with-Bridge.NET-blue.svg)](http://bridge.net/)
+
 
 I was surprised how easy it was. Due to clean and simplified API, Mithril was pretty quickly mapped to Bridge interfaces so I could start playing with TodoMVC. 
 
