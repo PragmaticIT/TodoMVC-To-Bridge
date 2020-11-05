@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticIt.BridgeNet.MithrilBridge", "PragmaticIt.BridgeNet.MithrilBridge\PragmaticIt.BridgeNet.MithrilBridge.csproj", "{ED446F14-8B0C-4613-B310-AA30E80489CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApplication", "SimpleApplication\SimpleApplication.csproj", "{F6F980B6-0B82-46BA-B3DC-CE3D26F16D41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{ED446F14-8B0C-4613-B310-AA30E80489CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED446F14-8B0C-4613-B310-AA30E80489CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED446F14-8B0C-4613-B310-AA30E80489CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F980B6-0B82-46BA-B3DC-CE3D26F16D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F980B6-0B82-46BA-B3DC-CE3D26F16D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F980B6-0B82-46BA-B3DC-CE3D26F16D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F980B6-0B82-46BA-B3DC-CE3D26F16D41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
