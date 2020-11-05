@@ -93,4 +93,4 @@ Similarly to HandlerBuilder, Routebuilder lets you declare the routing handler i
 
 7. **Lifecycle methods** Lifecycle methods (https://mithril.js.org/lifecycle-methods.html) are prepared in form of interfaces to be freely composed into any component.
 
-8. **m.request** and **m.jsonp** are currently not implemented.
+8. **m.jsonp** is not yet implemented.

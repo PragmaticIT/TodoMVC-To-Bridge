@@ -26,6 +26,11 @@ namespace PragmaticIt.BridgeNet.MithrilBridge
             _handlers[name] = handler;
             return this;
         }
+        public HandlerBuilder Add<T1,T2>(string name, Func<T1,T2> handler)
+        {
+            _handlers[name] = handler;
+            return this;
+        }
         public HandlerBuilder Add(string name, object value)
         {
             _handlers[name] = value;

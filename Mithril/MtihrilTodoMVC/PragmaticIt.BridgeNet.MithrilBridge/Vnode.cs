@@ -1,34 +1,42 @@
 ﻿using Bridge;
 using Bridge.Html5;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PragmaticIt.BridgeNet.MithrilBridge
 {
     [External]
     [Convention(Notation = Notation.CamelCase)]
     [IgnoreCast]
-    public class Vnode
+    public class VnodeBase
     {
-       public HTMLElement Dom { get; }
+        public object Tag { get; }
+        public string Key { get; }
+        public object Children { get; }
+        public object Text { get; }
+        public HTMLElement Dom { get; }
+        public int DomSize { get; }
     }
 
     [External]
     [Convention(Notation = Notation.CamelCase)]
     [IgnoreCast]
     [IgnoreGeneric]
-    public class Vnode<TAttrs>:Vnode {
-        public TAttrs Attrs{ get; }
+    public class Vnode<TAttrs> : VnodeBase
+    {
+        public TAttrs Attrs { get; }
     }
+    [External]
+    [Convention(Notation = Notation.CamelCase)]
+    [IgnoreCast]
+    [IgnoreGeneric]
+    public class Vnode : Vnode<object> { }
+
 
     [External]
     [Convention(Notation = Notation.CamelCase)]
     [IgnoreGeneric]
     [IgnoreCast]
-    public class Vnode<TState, TAttrs> : Vnode<TAttrs> where TState:IComponentState<TState> {
+    public class Vnode<TState, TAttrs> : Vnode<TAttrs> where TState : IComponentState<TState>
+    {
         public TState State { get; }
     }
 
